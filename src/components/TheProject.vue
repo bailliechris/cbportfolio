@@ -1,28 +1,32 @@
 <template>
-  <div>
-    <div class="box">
-      <div class="columns">
-        <div class="column is-narrow">
-          <div style="width: 200px;">
-            <img 
-              :src="project_img"
-              :alt="project_title"
-              v-on:click="flip_clicked" 
-              />
-          </div>
-        </div>
-        <div class="column">
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-3by2">
+        <img               
+          :src="project_img"
+          :alt="project_title"
+          v-on:click="flip_clicked" 
+        />
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
           <p class="title is-5">{{project_title}}</p>
-          <p class="subtitle">{{project_tech}}</p>
         </div>
       </div>
+
       <div v-if="clicked">
-        <div class="columns">
-          <div class="column is-full">
-            <p class="subtitle">{{project_text}}</p>
-            <p><a :href="button_link" target="_blank">Try it!</a></p>
-          </div>
+        <div class="content">
+          {{project_text}}
+          <br>
+          <a :href="button_link" target="_blank"><strong>Try it!</strong></a>
         </div>
+        <header class="card-header">
+          <p class="card-header-title is-centered">
+            {{project_tech}}
+          </p>
+        </header>
       </div>
     </div>
   </div>

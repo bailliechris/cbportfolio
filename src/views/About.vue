@@ -3,6 +3,10 @@
     
     <TheTitle title="About" subtitle="Other things..." />
 
+    <br />
+    <github-icon />
+    <twitter-icon />
+
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div>
-      <section class="hero is-link">
+      <section class="hero is-info">
         <div class="hero-body">
           <p class="title">
             Chris Baillie
@@ -45,8 +45,9 @@ export default {
 }
 @keyframes spin {
   0% { content:"Developer"; }
-  20% { content:"Father"; }
-  40% { content:"Car Enthusiast"; }
+  15% { content:"Father"; }
+  30% { content:"Husband"; }
+  45% { content:"Car Enthusiast"; }
   60% { content:"Photographer"; }
   80% { content:"Teacher"; }
   100% { content: "Learner"; }
