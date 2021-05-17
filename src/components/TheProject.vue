@@ -2,7 +2,8 @@
   <div class="card">
     <div class="card-image">
       <figure class="image is-3by2">
-        <img               
+        <img
+          width="300"               
           :src="project_img"
           :alt="project_title"
           v-on:click="flip_clicked" 
@@ -56,5 +57,12 @@ export default {
 </script>
 
 <style scoped>
+img {
+  opacity: 0.5;
+  border-radius: 25px;
+}
 
+img:hover {
+  opacity: 1;
+}
 </style>

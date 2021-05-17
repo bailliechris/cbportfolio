@@ -22,7 +22,7 @@ export default {
 
 <style>
 html, body {
-  height:100%
+  height:125%
 }
 
 #app {
@@ -41,15 +41,16 @@ html, body {
 
 .bg {
   /* The image used */
-  background-image: url("https://res.cloudinary.com/dzqp95iuv/image/upload/v1621109834/portfolio/bg_hbfxue.jpg");
+  background-image: url("https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bg_hbfxue_u30zyk.jpg");
 
   /* Full height */
-  height: 100%; 
+  height: 125%; 
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto auto;
+  background-attachment: fixed;
   background-origin:border-box;
 }
 </style>
