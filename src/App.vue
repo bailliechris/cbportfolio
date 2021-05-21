@@ -1,56 +1,106 @@
 <template>
   <div id="app">
-    <div class="bg">
-      <TheNav />
-      <router-view :key="$route.path" />
+    <div class="columns">
+      <div class="column">
+        <div id="sidebar" class="container">
+          <router-link id="nav_item" :to="{ path: '/' }">Chris Baillie</router-link>
+          <router-link id="nav_item" :to="{ path: '/projects' }">Projects</router-link>
+          <router-link id="nav_item" :to="{ path: '/about' }">About</router-link>
+          <a id="nav_item" href="https://twitter.com/BaillieChris" target="_blank">
+            <twitter-icon /> 
+          </a>
+          <a id="nav_item"  href="https://github.com/bailliechris" target="_blank">
+            <github-icon />
+          </a> 
+        </div>
+      </div>
+    <div class="column">
+      <div id="remainder" class="container">
+        <router-view :key="$route.path" />
+      </div>
     </div>
+  </div>   
   </div>
 </template>
 
 <script>
-import TheNav from './components/TheNav'
+//import TheNav from './components/TheNav'
 //import TheFooter from './components/TheFooter'
 
 
 export default {
   name: 'App',
   components: {
-    TheNav
+
   }
 }
 </script>
 
 <style>
-html, body {
-  height:125%
-}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  height: 100%;
-  margin:0;
 }
 
-#subcolour {
-  color:rgb(255, 238, 0);
+#sidebar{  
+    min-height: 15vh; 
+    width:90vw; 
+    margin: auto;
+    border-bottom: 5px solid black;
+    border-right:0px;
+    align-items:center;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bg_hbfxue_u30zyk.jpg");
+#nav_item {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:5px;
+} 
 
-  /* Full height */
-  height: 125%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto auto;
-  background-attachment: fixed;
-  background-origin:border-box;
+#nav_item:hover {
+  background-color: lightgray;
 }
+
+@media only screen and (min-width: 768px) 
+{  
+  #sidebar{  
+    height:100vh;
+    min-width:15vw;
+    max-width:15vw;
+    margin:auto;
+    color:black;
+    border-right: 5px solid black;
+    border-bottom: 0px;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  #remainder {
+    width:80vw;
+    margin:auto;
+    padding-right: 5vw;
+  }
+  
+  #nav_item {
+    background-color: white; 
+    border: none;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    font-size: 16px;
+    border-radius:5px;
+  } 
+}
+
 </style>

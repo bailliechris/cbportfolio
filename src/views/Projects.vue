@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <TheTitle title="Projects" subtitle="Things I've been working on..." />
+    <TheTitle title="Projects" subtitle="Click the images for more details..." />
 
     <br />
 

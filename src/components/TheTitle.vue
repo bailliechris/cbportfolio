@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-info">
+    <section id="hero" class="hero is-dark">
       <div class="hero-body">
         <p class="title">
           {{title}}
@@ -24,5 +24,8 @@ export default {
 </script>
 
 <style scoped>
+#hero {
+  border-radius:5px;
+}
 
 </style>

@@ -1,54 +1,42 @@
 <template>
   <div class="home">
-    <div>
-      <section class="hero is-info">
-        <div class="hero-body">
-          <p class="title">
-            Chris Baillie
-          </p>
-          <p class="subtitle">
-            <span id="change"></span>
-          </p>
-        </div>
-      </section>
-    </div>  
+    <section id="hero" class="hero is-dark">
+      <div class="hero-body">
+        <p class="title">
+          Chris Baillie
+        </p>
+        <p class="subtitle">
+          <span id="change"></span>
+        </p>
+      </div>
+    </section>
 
 
     <br />
 
-    <div class="box">
-      <div class="columns">
-        <div class="column">
-          <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bee_jnwlxs.png" />
-        </div>
-        <div class="column">
-          <p class="title is-5">Hello!</p>
-          <p class="subtitle is-6">For 15 years I have been adapting, in real time, to meet the changing
-            needs of clients. Getting to know them in depth and matching them
-            with the most suitable solutions. I am driven to constantly improve
-            and deliver results through my flexibility, focus and
-            determination. I am a firm believer in lifelong learning and I continue
-            to enjoy developing other skillsets including coding, mechanics and
-            photography. I am looking to focus on furthering
-            my coding skills.
-          </p>
-        </div>
+    <div class="columns">
+      <div class="column is-4">
+        <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bee_jnwlxs.png" />
+      </div>
+      <div class="column is-8">
+        <p class="title is-5">Hello!</p>
+        <p class="subtitle is-6">I love to code. I'm continuously developing my skill set, 
+          though my favourite combination is currently Vue.js Frontend with a NodeJS backend.
+          However I am flexible and have previously used C#, C++, Laravel (PHP) and Python.
+        </p>
       </div>
     </div>
 
-    <br />
-
-    <div class="box">
-      <p> Find me on:
-        <br />
-        <a href="https://twitter.com/BaillieChris" target="_blank">
-          <twitter-icon fillColor="#ffee00"/> 
-        </a>
-        <br />
-        <a href="https://github.com/bailliechris" target="_blank">
-          <github-icon fillColor="#ffee00"/>
-        </a>
-      </p>
+    <div class="container">
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/vue-logo_xokduz.png"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/nodejs-1-logo_hcrx64.png"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/ExpressJS-logo_rru70a.png"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/react_ugdux2.png"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/MongoDB-logo_pktmb3.gif"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/python_yi5auy.png"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/csharp_i9jdrd.jpg"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/cplusplus_cfsg57.svg"  />
+      <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/laravel_b28my5.png"  />
     </div>
   </div>
 </template>
@@ -70,31 +58,39 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  max-width: 100%;
+  height: 50px;
+}
+
+#hero {
+  border-radius:5px;
+}
 #change {
-  color:rgb(255, 238, 0);
+  color:white;
 }
 #change:after {
   content:"";
-  animation: spin 10s linear infinite;
+  animation: spin 20s linear infinite;
 }
 @keyframes spin {
-  0% { content:"Developer"; }
-  10% { content:"_";}
-  12% { content:"Husband"; }
-  20% { content: "__"; }
-  22% { content:"Father"; }
-  30% { content:"_ _"; }
-  32% { content:"Car Enthusiast"; }
-  40% { content:"__ _"; }
-  42% { content:"Photographer"; }
-  50% { content:"____"; }
-  52% { content:"Teacher"; }
-  60% { content:"____ _"; }
-  62% { content: "Learner"; }
-  70% { content: "_____"; }
-  72% { content: "Mechanic"; }
-  80% { content: "_____ _"; }
-  90% { content: "_____ __"; }
-  100% { content: "_____ _ _"; }
+  0% { content:"_______";}
+  6% { content:"Painter"; }
+  11% { content:"_______";}
+  17% { content:"Husband"; }
+  23% { content:"______"; }
+  28% { content:"Father"; }
+  32% { content:"___ __________"; }
+  38% { content:"Car Enthusiast"; }
+  45% { content:"____________"; }
+  51% { content:"Photographer"; }
+  56% { content:"_______"; }
+  61% { content:"Teacher"; }
+  67% { content:"_______"; }
+  72% { content:"Learner"; }
+  78% { content:"________"; }
+  83% { content:"Mechanic"; }
+  88% { content:"__________"; }
+  100% { content:"Developer"; }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    
-    <TheTitle title="About" subtitle="Other things..." />
+
+    <TheTitle title="About" subtitle="Other things I do..." />
 
     <br />
     <div class="box">
@@ -15,9 +15,7 @@
         </div>
       </div>
     </div>
-
-    <br />
-
+    
     <div class="box">
       <div class="columns">
         <div class="column">
@@ -26,6 +24,18 @@
         <div class="column">
           <p class="title is-5">Mechanic / Car Enthusiast</p>
           <p class="subtitle is-6">A decade ago I picked up a battered MX5 with the aim to learn how to look after vehicles. It's since enjoyed multiple trackdays and passed nearly every MOT.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="columns">
+        <div class="column">
+          <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632778/portfolio/sisters_osbq4r.jpg" />
+        </div>
+        <div class="column">
+          <p class="title is-5">Painter</p>
+          <p class="subtitle is-6">Painting Games Workshop figures and enjoying the different settings has long caused my desk to be covered in paint, bits of metal or plastic.</p>
         </div>
       </div>
     </div>
@@ -51,14 +61,17 @@ export default {
 </script>
 
 <style>
+#hero {
+  border-radius:5px;
+}
 .box{
   width: 85%;
   margin: auto;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 img {
   opacity: 0.5;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 img:hover {

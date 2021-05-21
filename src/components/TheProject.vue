@@ -1,9 +1,8 @@
 <template>
   <div class="card">
     <div class="card-image">
-      <figure class="image is-3by2">
-        <img
-          width="300"               
+      <figure class="image">
+        <img            
           :src="project_img"
           :alt="project_title"
           v-on:click="flip_clicked" 
@@ -13,7 +12,11 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <p class="title is-5">{{project_title}}</p>
+          <p class="title is-5">
+            <a :href="button_link">
+              {{project_title}}
+            </a>
+          </p>
         </div>
       </div>
 
@@ -57,12 +60,27 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 img {
   opacity: 0.5;
-  border-radius: 25px;
+  border-radius: 5px;
+  max-width: 50%;
+  height: auto;
 }
 
 img:hover {
   opacity: 1;
+}
+
+@media only screen and (min-width: 768px) 
+{  
+  img {
+    opacity: 0.5;
+    border-radius: 5px;
+    max-width: 300px;
+    height: auto;
+  }
 }
 </style>
