@@ -46,6 +46,7 @@ export default {
 }
 
 #sidebar{  
+    padding:0px;
     min-height: 15vh; 
     width:90vw; 
     margin: auto;
@@ -72,7 +73,9 @@ export default {
 
 @media only screen and (min-width: 768px) 
 {  
-  #sidebar{  
+  #sidebar{
+    padding:0px 5px;
+    position: fixed;  
     height:100vh;
     min-width:15vw;
     max-width:15vw;

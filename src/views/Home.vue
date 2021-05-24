@@ -28,11 +28,13 @@
     </div>
 
     <div class="container">
+      <p class="title is-6">Languages and Tools recently used:</p>
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/vue-logo_xokduz.png"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/nodejs-1-logo_hcrx64.png"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/ExpressJS-logo_rru70a.png"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/react_ugdux2.png"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/MongoDB-logo_pktmb3.gif"  />
+      <p class="title is-6">Languages and Tools previously used:</p>
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632353/portfolio/python_yi5auy.png"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/csharp_i9jdrd.jpg"  />
       <img class="logo" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632352/portfolio/cplusplus_cfsg57.svg"  />
