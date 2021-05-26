@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="box">
+    <div id="project" class="box" v-on:click="flip_clicked" >
       <div class="columns">
         <div class="column is-3">
             <img 
@@ -50,6 +50,12 @@ export default {
 </script>
 
 <style scoped>
+#project{
+   box-shadow: 0 rgba(127, 127, 127, .5);
+}
+#project:hover{
+   box-shadow: 5px 5px 5px -2px rgba(127, 127, 127, .5);
+}
 #image_area{
   justify-content: center;
   align-content: center;
