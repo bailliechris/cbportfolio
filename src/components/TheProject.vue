@@ -7,6 +7,7 @@
               :src="project_img"
               :alt="project_title"
               v-on:click="flip_clicked" 
+              id="image_area"
               />
         </div>
         <div class="column">
@@ -59,5 +60,8 @@ export default {
 #image_area{
   justify-content: center;
   align-content: center;
+}
+#image_area:hover{
+  animation: shake 0.5s;
 }
 </style>
