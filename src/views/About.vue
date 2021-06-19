@@ -73,7 +73,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #hero {
   border-radius:5px;
 }
@@ -86,10 +86,12 @@ export default {
 img {
   opacity: 0.5;
   border-radius: 5px;
+  transition: transform 1s;
 }
 
 img:hover {
   opacity: 1;
+  transform: scale(1.1);
 }
 </style>
 

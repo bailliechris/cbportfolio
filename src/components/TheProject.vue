@@ -53,15 +53,19 @@ export default {
 <style scoped>
 #project{
    box-shadow: 0 rgba(127, 127, 127, .5);
+   transition: box-shadow 2s;
 }
 #project:hover{
    box-shadow: 5px 5px 5px -2px rgba(127, 127, 127, .5);
 }
 #image_area{
+  opacity:0.5;
   justify-content: center;
   align-content: center;
+  transition: transform 1s;
 }
 #image_area:hover{
-  animation: shake 0.5s;
+  opacity:1;
+  transform: scale(1.1);
 }
 </style>

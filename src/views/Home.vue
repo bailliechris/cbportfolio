@@ -2,12 +2,16 @@
   <div class="home">
     <section id="hero" class="hero is-dark">
       <div class="hero-body">
-        <p class="title">
-          Chris Baillie
-        </p>
-        <p class="subtitle">
-          <span id="change"></span>
-        </p>
+        <div class="columns">
+          <div class="column">
+            <p class="title">
+              Chris Baillie
+            </p>
+          </div>
+          <div class="column">
+            <span id="change"></span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -16,7 +20,7 @@
 
     <div class="columns">
       <div class="column is-4">
-        <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bee_jnwlxs.png" />
+        <img id="img" width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/bee_jnwlxs.png" />
       </div>
       <div class="column is-8">
         <p class="title is-5">Hello!</p>
@@ -73,26 +77,38 @@ export default {
 }
 #change:after {
   content:"";
+  opacity: 0;
   animation: spin 20s linear infinite;
 }
 @keyframes spin {
-  0% { content:"_______";}
-  6% { content:"Painter"; }
-  11% { content:"_______";}
-  17% { content:"Husband"; }
-  23% { content:"______"; }
-  28% { content:"Father"; }
-  32% { content:"___ __________"; }
-  38% { content:"Car Enthusiast"; }
-  45% { content:"____________"; }
-  51% { content:"Photographer"; }
-  56% { content:"_______"; }
-  61% { content:"Teacher"; }
-  67% { content:"_______"; }
-  72% { content:"Learner"; }
-  78% { content:"________"; }
-  83% { content:"Mechanic"; }
-  88% { content:"__________"; }
-  100% { content:"Developer"; }
+  0% { content:" "; opacity: 0;}
+  6% { content:"Painter"; opacity: 1;}
+  11% { content:" ";opacity: 0;}
+  17% { content:"Husband"; opacity: 1;}
+  23% { content:" "; opacity: 0;}
+  28% { content:"Father"; opacity: 1;}
+  32% { content:" "; opacity: 0;}
+  38% { content:"Car Enthusiast"; opacity: 1;}
+  45% { content:" "; opacity: 0;}
+  51% { content:"Photographer"; opacity: 1;}
+  56% { content:" "; opacity: 0;}
+  61% { content:"Teacher"; opacity: 1;}
+  67% { content:" "; opacity: 0;}
+  72% { content:"Learner"; opacity: 1;}
+  78% { content:" "; opacity: 0;}
+  83% { content:"Mechanic"; opacity: 1;}
+  88% { content:" ";opacity: 0; }
+  100% { content:"Developer"; opacity: 1;}
+}
+
+img {
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: transform 1s;
+}
+
+img:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 </style>
