@@ -81,23 +81,23 @@ export default {
   animation: spin 20s linear infinite;
 }
 @keyframes spin {
-  0% { content:" "; opacity: 0;}
+  0% { content:"   "; opacity: 0;}
   6% { content:"Painter"; opacity: 1;}
-  11% { content:" ";opacity: 0;}
+  11% { content:"   ";opacity: 0;}
   17% { content:"Husband"; opacity: 1;}
-  23% { content:" "; opacity: 0;}
+  23% { content:"   "; opacity: 0;}
   28% { content:"Father"; opacity: 1;}
-  32% { content:" "; opacity: 0;}
+  32% { content:"   "; opacity: 0;}
   38% { content:"Car Enthusiast"; opacity: 1;}
-  45% { content:" "; opacity: 0;}
+  45% { content:"   "; opacity: 0;}
   51% { content:"Photographer"; opacity: 1;}
-  56% { content:" "; opacity: 0;}
+  56% { content:"   "; opacity: 0;}
   61% { content:"Teacher"; opacity: 1;}
-  67% { content:" "; opacity: 0;}
+  67% { content:"   "; opacity: 0;}
   72% { content:"Learner"; opacity: 1;}
-  78% { content:" "; opacity: 0;}
+  78% { content:"   "; opacity: 0;}
   83% { content:"Mechanic"; opacity: 1;}
-  88% { content:" ";opacity: 0; }
+  88% { content:"   ";opacity: 0; }
   100% { content:"Developer"; opacity: 1;}
 }
 

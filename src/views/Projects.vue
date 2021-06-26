@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <TheTitle title="Projects" subtitle="Click the images for more details..." />
+    <TheTitle title="Projects" subtitle="Forever learning" />
 
     <br />
 
@@ -18,7 +18,7 @@
     <TheProject 
       project_title="Keyword Quiz" 
       project_img="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280577/portfolio/quiz_uvgmjv.jpg"
-      project_tech="Vue, Vuex, MongoDB, Axios, Buefy"
+      project_tech="Vue, MongoDB, Axios, Buefy"
       project_text="A Fullstack solution that uploads results to MongoDB. Clients requested a low-stakes quiz system that could be accessed from iPads, PCs and mobiles. Simple enough to be used by GCSE students and techophobe staff."
       button_link="https://wonderful-kowalevski-d77ec1.netlify.app"
       />
