@@ -1,29 +1,20 @@
 <template>
-  <div>
-    <div id="project" class="box" v-on:click="flip_clicked" >
-      <div class="columns">
-        <div class="column is-3">
-            <img 
-              :src="project_img"
-              :alt="project_title"
-              v-on:click="flip_clicked" 
-              id="image_area"
-              />
-        </div>
-        <div class="column">
-          <p class="title is-5">{{project_title}}</p>
-          <p class="subtitle">{{project_tech}}</p>
-          <p><a :href="button_link" target="_blank">Try it!</a></p>
-        </div>
-      </div>
-      <div v-if="clicked">
-        <div class="columns">
-          <div class="column is-full">
-            <p class="subtitle">{{project_text}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="card" v-on:click="flip_clicked">
+    <header>
+      <img 
+        :src="project_img"
+        :alt="project_title"
+        v-on:click="flip_clicked" 
+      />
+      <section>
+        <p class="title is-5">{{project_title}}</p>
+        <p class="subtitle">{{project_tech}}</p>
+        <p><a :href="button_link" target="_blank">Try it!</a></p>
+      </section>
+    </header>
+    <footer v-if="clicked">
+      <p class="subtitle">{{project_text}}</p>
+    </footer>
   </div>
 </template>
 
@@ -51,20 +42,48 @@ export default {
 </script>
 
 <style scoped>
-#project{
-   box-shadow: 0 rgba(127, 127, 127, .5);
-   transition: box-shadow 2s;
+div.card{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px --2px rgba(127, 127, 127, .5);
+  transition: box-shadow 2s;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #666;
 }
-#project:hover{
+div.card:hover{
    box-shadow: 5px 5px 5px -2px rgba(127, 127, 127, .5);
 }
-#image_area{
-  opacity:0.5;
-  justify-content: center;
-  align-content: center;
-  transition: transform 1s;
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
 }
-#image_area:hover{
+header section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p:first-child {
+  font-weight: bolder;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  opacity:0.5;
+  transition: transform 1s;
+  width: 100%;
+  border-radius: 0.5em;
+}
+img:hover{
   opacity:1;
   transform: scale(1.1);
 }

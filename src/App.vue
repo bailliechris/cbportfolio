@@ -1,26 +1,22 @@
 <template>
   <div id="app">
-    <div class="columns">
-      <div class="column">
-        <div id="sidebar" class="container">
-          <router-link id="nav_item" :to="{ path: '/' }">Chris Baillie</router-link>
-          <router-link id="nav_item" :to="{ path: '/projects' }">Projects</router-link>
-          <router-link id="nav_item" :to="{ path: '/about' }">About</router-link>
-          <a id="nav_item" href="https://twitter.com/BaillieChris" target="_blank">
-            <twitter-icon /> 
-          </a>
-          <a id="nav_item"  href="https://github.com/bailliechris" target="_blank">
-            <github-icon />
-          </a> 
-        </div>
-      </div>
-    <div class="column">
-      <div id="remainder" class="container">
+    <nav>
+      <article id="sidebar">
+        <router-link class="nav_item" :to="{ path: '/' }">Chris Baillie</router-link>
+        <router-link class="nav_item" :to="{ path: '/projects' }">Projects</router-link>
+        <router-link class="nav_item" :to="{ path: '/about' }">About</router-link>
+        <a class="nav_item" href="https://twitter.com/BaillieChris" target="_blank">
+          <twitter-icon /> 
+        </a>
+        <a class="nav_item"  href="https://github.com/bailliechris" target="_blank">
+          <github-icon />
+        </a> 
+      </article>
+    </nav>
+    <main>
         <router-view :key="$route.path" />
-      </div>
-    </div>
+    </main>
   </div>   
-  </div>
 </template>
 
 <script>
@@ -36,74 +32,67 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  display: flex;
 }
 
-#sidebar{  
-    padding:0px;
-    min-height: 15vh; 
-    width:90vw; 
-    margin: auto;
-    border-bottom: 5px solid black;
-    border-right:0px;
-    align-items:center;
+nav {
+  position: relative;
+  width: 10em;
+  height: 99vh;
+  border-right: 5px solid black;
+  background-color: white;
 }
 
-#nav_item {
-  background-color: white; /* Green */
+nav article#sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main {
+  margin-left: 0.5em;
+}
+
+.nav_item {
+  background-color: white;
   border: none;
   color: black;
-  padding: 15px 15px;
+  padding: 1em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  border-radius:5px;
+  font-size: 1em;
+  font-weight: bolder;
 } 
 
-#nav_item:hover {
-  background-color: lightgray;
+.nav_item:hover {
+  text-shadow:#666666 1px 0 10px;
 }
 
-@media only screen and (min-width: 768px) 
-{  
-  #sidebar{
-    padding:0px 5px;
-    position: fixed;  
-    height:100vh;
-    min-width:15vw;
-    max-width:15vw;
-    margin:auto;
-    color:black;
-    border-right: 5px solid black;
-    border-bottom: 0px;
-    align-items:center;
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  nav article#sidebar {
+    flex-direction: row;
     justify-content: center;
   }
-  
-  #remainder {
-    width:80vw;
-    margin:auto;
-    padding-right: 5vw;
+
+  main {
+    margin-top: 3.375em;
+    margin-left: 0;
   }
-  
-  #nav_item {
-    background-color: white; 
-    border: none;
-    color: black;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    display:block;
-    font-size: 16px;
-    border-radius:5px;
-  } 
 }
 
 </style>

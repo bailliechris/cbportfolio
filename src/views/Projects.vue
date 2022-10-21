@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     
     <TheTitle title="Projects" subtitle="Forever learning" />
 
@@ -86,6 +86,11 @@ export default {
 </script>
 
 <style scoped>
+
+/* div.page {
+  width: 100%;
+} */
+
 
 
 </style>

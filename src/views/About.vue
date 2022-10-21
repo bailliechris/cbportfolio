@@ -4,52 +4,51 @@
     <TheTitle title="About" subtitle="Other things I do..." />
 
     <br />
-    <div class="box">
-      <div class="columns">
-        <div class="column">
+
+    <div class="card">
+      <header>
           <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/child_hohuui.png" />
-        </div>
-        <div class="column">
+        <section>
           <p class="title is-5">Photographer</p>
           <p class="subtitle is-6">I always enjoy learning new things, so discovering photography was a new rabbit hole for me. My most common subjects are landscapes and my children on days out through a Canon M5, EF-m 32mm or EF 70-200.</p>
-        </div>
-      </div>
+        </section>
+      </header>
     </div>
+
+    <br />
     
-    <div class="box">
-      <div class="columns">
-        <div class="column">
+    <div class="card">
+      <header>
           <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621280578/portfolio/track_nhjeyc.png" />
-        </div>
-        <div class="column">
+        <section>
           <p class="title is-5">Mechanic / Car Enthusiast</p>
           <p class="subtitle is-6">A decade ago I picked up a battered MX5 with the aim to learn how to look after vehicles. It's since enjoyed multiple trackdays and passed nearly every MOT.</p>
-        </div>
-      </div>
+        </section>
+      </header>
     </div>
 
-    <div class="box">
-      <div class="columns">
-        <div class="column">
+    <br />
+
+    <div class="card">
+      <header>
           <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1621632778/portfolio/sisters_osbq4r.jpg" />
-        </div>
-        <div class="column">
+        <section>
           <p class="title is-5">Painter</p>
           <p class="subtitle is-6">Painting Games Workshop figures and enjoying the different settings has long caused my desk to be covered in paint, bits of metal or plastic.</p>
-        </div>
-      </div>
+        </section>
+      </header>
     </div>
 
-    <div class="box">
-      <div class="columns">
-        <div class="column">
+    <br />
+
+    <div class="card">
+      <header>
           <img width="300" src="https://res.cloudinary.com/dzqp95iuv/image/upload/v1624047273/portfolio/headphones-small_ir0fgb.jpg" />
-        </div>
-        <div class="column">
+        <section>
           <p class="title is-5">Gamer</p>
           <p class="subtitle is-6">If I can tear myself away from a coding project I can also be found enjoying cooperative or team based PC or board games.</p>
-        </div>
-      </div>
+        </section>
+      </header>
     </div>
     
 
@@ -74,23 +73,50 @@ export default {
 </script>
 
 <style scoped>
-#hero {
-  border-radius:5px;
+div.card{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px --2px rgba(127, 127, 127, .5);
+  transition: box-shadow 2s;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #666;
 }
-.box{
-  width: 85%;
-  margin: auto;
-  border-radius: 5px;
+div.card:hover{
+   box-shadow: 5px 5px 5px -2px rgba(127, 127, 127, .5);
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  align-items: center;
+}
+header section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p:first-child {
+  font-weight: bolder;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-  opacity: 0.5;
-  border-radius: 5px;
+  opacity:0.5;
   transition: transform 1s;
+  width: 100%;
+  border-radius: 0.5em;
 }
-
-img:hover {
-  opacity: 1;
+img:hover{
+  opacity:1;
   transform: scale(1.1);
 }
 </style>
